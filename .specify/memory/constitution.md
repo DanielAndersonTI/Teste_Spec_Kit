@@ -1,50 +1,65 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Simple BMI Calculator Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Vanilla JavaScript (NO FRAMEWORKS)
+Every feature is implemented using pure JavaScript (ES6+) without any frameworks or libraries. No jQuery, no Vue, no React. The codebase remains lightweight, fast, and easy to understand.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clean Code & English Naming
+All variable names, functions, comments, and identifiers must be in English. Code must be readable, well-structured, and follow consistent naming conventions (camelCase for functions/variables, descriptive names). Self-documenting code is preferred.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Simplicity First (YAGNI)
+Implement only what is needed for a functional BMI calculator. No unnecessary features, no over-engineering. The application should solve one problem well: calculate BMI from height and weight inputs.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Responsive Design & Accessibility
+UI must work seamlessly on desktop and mobile devices. Clean, minimal design with good contrast and readable fonts. User experience is paramount; interaction should be intuitive.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Test-Driven Development (Core Logic)
+BMI calculation logic must be covered by unit tests before implementation. Tests validate edge cases (invalid inputs, boundary values, unit conversions).
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technology Stack
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+**Frontend:**
+- HTML5: Semantic markup, accessibility attributes
+- CSS3: Flexbox/Grid for responsive layout, custom properties for theming
+- JavaScript (Vanilla ES6+): No frameworks, no build tools required
+- File-based architecture (HTML, CSS, JS as separate files)
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+**Testing:**
+- Jest or Vitest for unit tests
+- Manual testing for UI/UX validation
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+**Browser Support:**
+- Modern browsers (Chrome, Firefox, Safari, Edge) - ES6+ support required
+
+**No External Dependencies:** The application runs directly in any modern browser without npm, webpack, or build steps.
+
+## Development Workflow
+
+**Feature Development:**
+1. Write acceptance criteria (examples of inputs/outputs)
+2. Write unit tests first (Red phase)
+3. Implement functionality (Green phase)
+4. Refactor for clean code (Refactor phase)
+5. Manual testing on desktop and mobile
+6. Code review for English naming and code quality
+
+**File Structure:**
+- `index.html` - Structure and markup
+- `styles.css` - Styling and responsive design
+- `calculator.js` - Core BMI calculation logic (testable)
+- `ui.js` - DOM manipulation and user interaction
+- `tests/` - Unit test files
+- `README.md` - Usage and feature documentation
+
+**Quality Gates:**
+- All code must have only English identifiers
+- BMI logic must have 100% test coverage
+- Code must pass linting (consistent style)
+- Responsive design must work on 320px (mobile) to 1920px (desktop)
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution defines the non-negotiable standards for the Simple BMI Calculator project. All code must comply with these principles. English naming is mandatory. Vanilla JavaScript requirement cannot be waived. Test coverage for calculation logic is mandatory. Simplicity supersedes feature creep.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-03-23 | **Last Amended**: 2026-03-23

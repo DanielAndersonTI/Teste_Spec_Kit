@@ -1,0 +1,26 @@
+{
+  "name": "bmi-calculator",
+  "version": "1.0.0",
+  "description": "Calculadora de IMC simples com Vanilla JavaScript",
+  "main": "src/calculator.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "serve": "python -m http.server 8000",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "bmi",
+    "calculator",
+    "imc",
+    "health",
+    "vanilla-js"
+  ],
+  "author": "Daniel Anderson de Souza",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "jest": "^29.7.0"
+  }
+}
